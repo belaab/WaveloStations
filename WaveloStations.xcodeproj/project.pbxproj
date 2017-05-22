@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A90CEF771ED38A84003B4116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF761ED38A84003B4116 /* AppDelegate.swift */; };
+		A90CEF791ED38A84003B4116 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF781ED38A84003B4116 /* ViewController.swift */; };
+		A90CEF7C1ED38A84003B4116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90CEF7A1ED38A84003B4116 /* Main.storyboard */; };
+		A90CEF7F1ED38A84003B4116 /* WaveloStations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF7D1ED38A84003B4116 /* WaveloStations.xcdatamodeld */; };
+		A90CEF811ED38A84003B4116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A90CEF801ED38A84003B4116 /* Assets.xcassets */; };
+		A90CEF841ED38A84003B4116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90CEF821ED38A84003B4116 /* LaunchScreen.storyboard */; };
+		A90CEF8F1ED38A84003B4116 /* WaveloStationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF8E1ED38A84003B4116 /* WaveloStationsTests.swift */; };
+		A90CEF9A1ED38A84003B4116 /* WaveloStationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF991ED38A84003B4116 /* WaveloStationsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A90CEF8B1ED38A84003B4116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A90CEF6B1ED38A84003B4116 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A90CEF721ED38A84003B4116;
+			remoteInfo = WaveloStations;
+		};
+		A90CEF961ED38A84003B4116 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A90CEF6B1ED38A84003B4116 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A90CEF721ED38A84003B4116;
+			remoteInfo = WaveloStations;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A90CEF731ED38A84003B4116 /* WaveloStations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveloStations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90CEF761ED38A84003B4116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A90CEF781ED38A84003B4116 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A90CEF7B1ED38A84003B4116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A90CEF7E1ED38A84003B4116 /* WaveloStations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WaveloStations.xcdatamodel; sourceTree = "<group>"; };
+		A90CEF801ED38A84003B4116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A90CEF831ED38A84003B4116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A90CEF851ED38A84003B4116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A90CEF8A1ED38A84003B4116 /* WaveloStationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaveloStationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90CEF8E1ED38A84003B4116 /* WaveloStationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveloStationsTests.swift; sourceTree = "<group>"; };
+		A90CEF901ED38A84003B4116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A90CEF951ED38A84003B4116 /* WaveloStationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaveloStationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90CEF991ED38A84003B4116 /* WaveloStationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveloStationsUITests.swift; sourceTree = "<group>"; };
+		A90CEF9B1ED38A84003B4116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A90CEF701ED38A84003B4116 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90CEF871ED38A84003B4116 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90CEF921ED38A84003B4116 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A90CEF6A1ED38A84003B4116 = {
+			isa = PBXGroup;
+			children = (
+				A90CEF751ED38A84003B4116 /* WaveloStations */,
+				A90CEF8D1ED38A84003B4116 /* WaveloStationsTests */,
+				A90CEF981ED38A84003B4116 /* WaveloStationsUITests */,
+				A90CEF741ED38A84003B4116 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A90CEF741ED38A84003B4116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A90CEF731ED38A84003B4116 /* WaveloStations.app */,
+				A90CEF8A1ED38A84003B4116 /* WaveloStationsTests.xctest */,
+				A90CEF951ED38A84003B4116 /* WaveloStationsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A90CEF751ED38A84003B4116 /* WaveloStations */ = {
+			isa = PBXGroup;
+			children = (
+				A90CEF761ED38A84003B4116 /* AppDelegate.swift */,
+				A90CEF781ED38A84003B4116 /* ViewController.swift */,
+				A90CEF7A1ED38A84003B4116 /* Main.storyboard */,
+				A90CEF801ED38A84003B4116 /* Assets.xcassets */,
+				A90CEF821ED38A84003B4116 /* LaunchScreen.storyboard */,
+				A90CEF851ED38A84003B4116 /* Info.plist */,
+				A90CEF7D1ED38A84003B4116 /* WaveloStations.xcdatamodeld */,
+			);
+			path = WaveloStations;
+			sourceTree = "<group>";
+		};
+		A90CEF8D1ED38A84003B4116 /* WaveloStationsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A90CEF8E1ED38A84003B4116 /* WaveloStationsTests.swift */,
+				A90CEF901ED38A84003B4116 /* Info.plist */,
+			);
+			path = WaveloStationsTests;
+			sourceTree = "<group>";
+		};
+		A90CEF981ED38A84003B4116 /* WaveloStationsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A90CEF991ED38A84003B4116 /* WaveloStationsUITests.swift */,
+				A90CEF9B1ED38A84003B4116 /* Info.plist */,
+			);
+			path = WaveloStationsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A90CEF721ED38A84003B4116 /* WaveloStations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90CEF9E1ED38A84003B4116 /* Build configuration list for PBXNativeTarget "WaveloStations" */;
+			buildPhases = (
+				A90CEF6F1ED38A84003B4116 /* Sources */,
+				A90CEF701ED38A84003B4116 /* Frameworks */,
+				A90CEF711ED38A84003B4116 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaveloStations;
+			productName = WaveloStations;
+			productReference = A90CEF731ED38A84003B4116 /* WaveloStations.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A90CEF891ED38A84003B4116 /* WaveloStationsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90CEFA11ED38A84003B4116 /* Build configuration list for PBXNativeTarget "WaveloStationsTests" */;
+			buildPhases = (
+				A90CEF861ED38A84003B4116 /* Sources */,
+				A90CEF871ED38A84003B4116 /* Frameworks */,
+				A90CEF881ED38A84003B4116 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A90CEF8C1ED38A84003B4116 /* PBXTargetDependency */,
+			);
+			name = WaveloStationsTests;
+			productName = WaveloStationsTests;
+			productReference = A90CEF8A1ED38A84003B4116 /* WaveloStationsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A90CEF941ED38A84003B4116 /* WaveloStationsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90CEFA41ED38A84003B4116 /* Build configuration list for PBXNativeTarget "WaveloStationsUITests" */;
+			buildPhases = (
+				A90CEF911ED38A84003B4116 /* Sources */,
+				A90CEF921ED38A84003B4116 /* Frameworks */,
+				A90CEF931ED38A84003B4116 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A90CEF971ED38A84003B4116 /* PBXTargetDependency */,
+			);
+			name = WaveloStationsUITests;
+			productName = WaveloStationsUITests;
+			productReference = A90CEF951ED38A84003B4116 /* WaveloStationsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A90CEF6B1ED38A84003B4116 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = IB;
+				TargetAttributes = {
+					A90CEF721ED38A84003B4116 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = K9ASVR2BY4;
+						ProvisioningStyle = Automatic;
+					};
+					A90CEF891ED38A84003B4116 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = K9ASVR2BY4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A90CEF721ED38A84003B4116;
+					};
+					A90CEF941ED38A84003B4116 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = K9ASVR2BY4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A90CEF721ED38A84003B4116;
+					};
+				};
+			};
+			buildConfigurationList = A90CEF6E1ED38A84003B4116 /* Build configuration list for PBXProject "WaveloStations" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A90CEF6A1ED38A84003B4116;
+			productRefGroup = A90CEF741ED38A84003B4116 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A90CEF721ED38A84003B4116 /* WaveloStations */,
+				A90CEF891ED38A84003B4116 /* WaveloStationsTests */,
+				A90CEF941ED38A84003B4116 /* WaveloStationsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A90CEF711ED38A84003B4116 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90CEF841ED38A84003B4116 /* LaunchScreen.storyboard in Resources */,
+				A90CEF811ED38A84003B4116 /* Assets.xcassets in Resources */,
+				A90CEF7C1ED38A84003B4116 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90CEF881ED38A84003B4116 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90CEF931ED38A84003B4116 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A90CEF6F1ED38A84003B4116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90CEF791ED38A84003B4116 /* ViewController.swift in Sources */,
+				A90CEF7F1ED38A84003B4116 /* WaveloStations.xcdatamodeld in Sources */,
+				A90CEF771ED38A84003B4116 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90CEF861ED38A84003B4116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90CEF8F1ED38A84003B4116 /* WaveloStationsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90CEF911ED38A84003B4116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90CEF9A1ED38A84003B4116 /* WaveloStationsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A90CEF8C1ED38A84003B4116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A90CEF721ED38A84003B4116 /* WaveloStations */;
+			targetProxy = A90CEF8B1ED38A84003B4116 /* PBXContainerItemProxy */;
+		};
+		A90CEF971ED38A84003B4116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A90CEF721ED38A84003B4116 /* WaveloStations */;
+			targetProxy = A90CEF961ED38A84003B4116 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A90CEF7A1ED38A84003B4116 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A90CEF7B1ED38A84003B4116 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A90CEF821ED38A84003B4116 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A90CEF831ED38A84003B4116 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A90CEF9C1ED38A84003B4116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A90CEF9D1ED38A84003B4116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A90CEF9F1ED38A84003B4116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9ASVR2BY4;
+				INFOPLIST_FILE = WaveloStations/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IB.WaveloStations;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A90CEFA01ED38A84003B4116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9ASVR2BY4;
+				INFOPLIST_FILE = WaveloStations/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IB.WaveloStations;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A90CEFA21ED38A84003B4116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = K9ASVR2BY4;
+				INFOPLIST_FILE = WaveloStationsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IB.WaveloStationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaveloStations.app/WaveloStations";
+			};
+			name = Debug;
+		};
+		A90CEFA31ED38A84003B4116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = K9ASVR2BY4;
+				INFOPLIST_FILE = WaveloStationsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IB.WaveloStationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaveloStations.app/WaveloStations";
+			};
+			name = Release;
+		};
+		A90CEFA51ED38A84003B4116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = K9ASVR2BY4;
+				INFOPLIST_FILE = WaveloStationsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IB.WaveloStationsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WaveloStations;
+			};
+			name = Debug;
+		};
+		A90CEFA61ED38A84003B4116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = K9ASVR2BY4;
+				INFOPLIST_FILE = WaveloStationsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IB.WaveloStationsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = WaveloStations;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A90CEF6E1ED38A84003B4116 /* Build configuration list for PBXProject "WaveloStations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90CEF9C1ED38A84003B4116 /* Debug */,
+				A90CEF9D1ED38A84003B4116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90CEF9E1ED38A84003B4116 /* Build configuration list for PBXNativeTarget "WaveloStations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90CEF9F1ED38A84003B4116 /* Debug */,
+				A90CEFA01ED38A84003B4116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A90CEFA11ED38A84003B4116 /* Build configuration list for PBXNativeTarget "WaveloStationsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90CEFA21ED38A84003B4116 /* Debug */,
+				A90CEFA31ED38A84003B4116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A90CEFA41ED38A84003B4116 /* Build configuration list for PBXNativeTarget "WaveloStationsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90CEFA51ED38A84003B4116 /* Debug */,
+				A90CEFA61ED38A84003B4116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A90CEF7D1ED38A84003B4116 /* WaveloStations.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A90CEF7E1ED38A84003B4116 /* WaveloStations.xcdatamodel */,
+			);
+			currentVersion = A90CEF7E1ED38A84003B4116 /* WaveloStations.xcdatamodel */;
+			path = WaveloStations.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A90CEF6B1ED38A84003B4116 /* Project object */;
+}
