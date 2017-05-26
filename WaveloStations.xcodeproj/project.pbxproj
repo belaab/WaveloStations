@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0366AEF6B6C83D8E17AD55E0 /* Pods_WaveloStations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6F8FE11DC63B6F223B2CBF /* Pods_WaveloStations.framework */; };
 		A90CEF771ED38A84003B4116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF761ED38A84003B4116 /* AppDelegate.swift */; };
 		A90CEF791ED38A84003B4116 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF781ED38A84003B4116 /* ViewController.swift */; };
 		A90CEF7C1ED38A84003B4116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90CEF7A1ED38A84003B4116 /* Main.storyboard */; };
@@ -15,6 +16,10 @@
 		A90CEF841ED38A84003B4116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90CEF821ED38A84003B4116 /* LaunchScreen.storyboard */; };
 		A90CEF8F1ED38A84003B4116 /* WaveloStationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF8E1ED38A84003B4116 /* WaveloStationsTests.swift */; };
 		A90CEF9A1ED38A84003B4116 /* WaveloStationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF991ED38A84003B4116 /* WaveloStationsUITests.swift */; };
+		A9224DF11ED712D500E4100C /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9224DF01ED712D500E4100C /* ListController.swift */; };
+		A9224DF31ED73B2700E4100C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9224DF21ED73B2700E4100C /* Cell.swift */; };
+		BF7B044917B2C561E1FEB7B3 /* Pods_WaveloStationsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5494190E8870E18FC111A5 /* Pods_WaveloStationsUITests.framework */; };
+		C991E8C68F4E773DBBA1FB5C /* Pods_WaveloStationsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42840752BDCAFDD8E58BD401 /* Pods_WaveloStationsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C5494190E8870E18FC111A5 /* Pods_WaveloStationsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaveloStationsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42840752BDCAFDD8E58BD401 /* Pods_WaveloStationsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaveloStationsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AF9B3FED43070229D6791BE /* Pods-WaveloStationsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveloStationsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaveloStationsUITests/Pods-WaveloStationsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		666890F787757ED476448960 /* Pods-WaveloStations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveloStations.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaveloStations/Pods-WaveloStations.release.xcconfig"; sourceTree = "<group>"; };
+		6C6784667AAE3FDFBE01BC8B /* Pods-WaveloStationsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveloStationsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaveloStationsTests/Pods-WaveloStationsTests.release.xcconfig"; sourceTree = "<group>"; };
+		854214E02F3F91126387C18E /* Pods-WaveloStations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveloStations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaveloStations/Pods-WaveloStations.debug.xcconfig"; sourceTree = "<group>"; };
+		87C67E32134B378DCF6CA28B /* Pods-WaveloStationsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveloStationsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaveloStationsUITests/Pods-WaveloStationsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8C6F8FE11DC63B6F223B2CBF /* Pods_WaveloStations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaveloStations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90CEF731ED38A84003B4116 /* WaveloStations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveloStations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90CEF761ED38A84003B4116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A90CEF781ED38A84003B4116 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +62,9 @@
 		A90CEF951ED38A84003B4116 /* WaveloStationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaveloStationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90CEF991ED38A84003B4116 /* WaveloStationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveloStationsUITests.swift; sourceTree = "<group>"; };
 		A90CEF9B1ED38A84003B4116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9224DF01ED712D500E4100C /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		A9224DF21ED73B2700E4100C /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		BB06EA3305102D9AE528F2BD /* Pods-WaveloStationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveloStationsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaveloStationsTests/Pods-WaveloStationsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0366AEF6B6C83D8E17AD55E0 /* Pods_WaveloStations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C991E8C68F4E773DBBA1FB5C /* Pods_WaveloStationsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7B044917B2C561E1FEB7B3 /* Pods_WaveloStationsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A1BE177FBA4A7F6C5714041 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				854214E02F3F91126387C18E /* Pods-WaveloStations.debug.xcconfig */,
+				666890F787757ED476448960 /* Pods-WaveloStations.release.xcconfig */,
+				BB06EA3305102D9AE528F2BD /* Pods-WaveloStationsTests.debug.xcconfig */,
+				6C6784667AAE3FDFBE01BC8B /* Pods-WaveloStationsTests.release.xcconfig */,
+				4AF9B3FED43070229D6791BE /* Pods-WaveloStationsUITests.debug.xcconfig */,
+				87C67E32134B378DCF6CA28B /* Pods-WaveloStationsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		36D9AFE36691B63695339516 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C6F8FE11DC63B6F223B2CBF /* Pods_WaveloStations.framework */,
+				42840752BDCAFDD8E58BD401 /* Pods_WaveloStationsTests.framework */,
+				3C5494190E8870E18FC111A5 /* Pods_WaveloStationsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A90CEF6A1ED38A84003B4116 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +125,8 @@
 				A90CEF8D1ED38A84003B4116 /* WaveloStationsTests */,
 				A90CEF981ED38A84003B4116 /* WaveloStationsUITests */,
 				A90CEF741ED38A84003B4116 /* Products */,
+				0A1BE177FBA4A7F6C5714041 /* Pods */,
+				36D9AFE36691B63695339516 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +145,8 @@
 			children = (
 				A90CEF761ED38A84003B4116 /* AppDelegate.swift */,
 				A90CEF781ED38A84003B4116 /* ViewController.swift */,
+				A9224DF01ED712D500E4100C /* ListController.swift */,
+				A9224DF21ED73B2700E4100C /* Cell.swift */,
 				A90CEF7A1ED38A84003B4116 /* Main.storyboard */,
 				A90CEF801ED38A84003B4116 /* Assets.xcassets */,
 				A90CEF821ED38A84003B4116 /* LaunchScreen.storyboard */,
@@ -135,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A90CEF9E1ED38A84003B4116 /* Build configuration list for PBXNativeTarget "WaveloStations" */;
 			buildPhases = (
+				F72C520A5BA3053575EBA2D8 /* [CP] Check Pods Manifest.lock */,
 				A90CEF6F1ED38A84003B4116 /* Sources */,
 				A90CEF701ED38A84003B4116 /* Frameworks */,
 				A90CEF711ED38A84003B4116 /* Resources */,
+				7EA91B54FA0C8F6072539F52 /* [CP] Embed Pods Frameworks */,
+				AE7B8A3EEF0F5C37721AFE51 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A90CEFA11ED38A84003B4116 /* Build configuration list for PBXNativeTarget "WaveloStationsTests" */;
 			buildPhases = (
+				15347FA3AD23FE3EC36A143A /* [CP] Check Pods Manifest.lock */,
 				A90CEF861ED38A84003B4116 /* Sources */,
 				A90CEF871ED38A84003B4116 /* Frameworks */,
 				A90CEF881ED38A84003B4116 /* Resources */,
+				8006B2E3523CEFB7EB8D052F /* [CP] Embed Pods Frameworks */,
+				02D87A530BD9C983E0940718 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A90CEFA41ED38A84003B4116 /* Build configuration list for PBXNativeTarget "WaveloStationsUITests" */;
 			buildPhases = (
+				9D1E9D5F99F2506044DDB6C4 /* [CP] Check Pods Manifest.lock */,
 				A90CEF911ED38A84003B4116 /* Sources */,
 				A90CEF921ED38A84003B4116 /* Frameworks */,
 				A90CEF931ED38A84003B4116 /* Resources */,
+				16144C6DBA848B6D0A0C74EB /* [CP] Embed Pods Frameworks */,
+				75C9AFC2C4686214FCC37D99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,6 +315,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02D87A530BD9C983E0940718 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaveloStationsTests/Pods-WaveloStationsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15347FA3AD23FE3EC36A143A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		16144C6DBA848B6D0A0C74EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaveloStationsUITests/Pods-WaveloStationsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75C9AFC2C4686214FCC37D99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaveloStationsUITests/Pods-WaveloStationsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EA91B54FA0C8F6072539F52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaveloStations/Pods-WaveloStations-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8006B2E3523CEFB7EB8D052F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaveloStationsTests/Pods-WaveloStationsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D1E9D5F99F2506044DDB6C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE7B8A3EEF0F5C37721AFE51 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaveloStations/Pods-WaveloStations-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F72C520A5BA3053575EBA2D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A90CEF6F1ED38A84003B4116 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -267,7 +460,9 @@
 			files = (
 				A90CEF791ED38A84003B4116 /* ViewController.swift in Sources */,
 				A90CEF7F1ED38A84003B4116 /* WaveloStations.xcdatamodeld in Sources */,
+				A9224DF31ED73B2700E4100C /* Cell.swift in Sources */,
 				A90CEF771ED38A84003B4116 /* AppDelegate.swift in Sources */,
+				A9224DF11ED712D500E4100C /* ListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +614,7 @@
 		};
 		A90CEF9F1ED38A84003B4116 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 854214E02F3F91126387C18E /* Pods-WaveloStations.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K9ASVR2BY4;
@@ -432,6 +628,7 @@
 		};
 		A90CEFA01ED38A84003B4116 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 666890F787757ED476448960 /* Pods-WaveloStations.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K9ASVR2BY4;
@@ -445,6 +642,7 @@
 		};
 		A90CEFA21ED38A84003B4116 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB06EA3305102D9AE528F2BD /* Pods-WaveloStationsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -460,6 +658,7 @@
 		};
 		A90CEFA31ED38A84003B4116 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C6784667AAE3FDFBE01BC8B /* Pods-WaveloStationsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +674,7 @@
 		};
 		A90CEFA51ED38A84003B4116 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AF9B3FED43070229D6791BE /* Pods-WaveloStationsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = K9ASVR2BY4;
@@ -489,6 +689,7 @@
 		};
 		A90CEFA61ED38A84003B4116 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87C67E32134B378DCF6CA28B /* Pods-WaveloStationsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = K9ASVR2BY4;
@@ -520,6 +721,7 @@
 				A90CEFA01ED38A84003B4116 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A90CEFA11ED38A84003B4116 /* Build configuration list for PBXNativeTarget "WaveloStationsTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +730,7 @@
 				A90CEFA31ED38A84003B4116 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A90CEFA41ED38A84003B4116 /* Build configuration list for PBXNativeTarget "WaveloStationsUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +739,7 @@
 				A90CEFA61ED38A84003B4116 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

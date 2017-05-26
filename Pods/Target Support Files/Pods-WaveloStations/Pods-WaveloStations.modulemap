@@ -1,0 +1,6 @@
+framework module Pods_WaveloStations {
+  umbrella header "Pods-WaveloStations-umbrella.h"
+
+  export *
+  module * { export * }
+}
