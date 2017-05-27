@@ -6,25 +6,12 @@
 //  Copyright © 2017 IB. All rights reserved.
 //
 
-//class Station{
-//    
-//    var place: String!
-//    var stationsCount: String!
-//    var status: String!
-//    
-//    init(place: String, stationsCount: String, status: String){
-//        self.place = place
-//        self.stationsCount = stationsCount
-//        self.status = status
-//    }
-//}
 
 
 struct Station {
     var place: String!
     var stationsCount: String!
     var status: String!
-
 }
 
 
@@ -32,7 +19,30 @@ import UIKit
 import Alamofire
 
 class ListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    let reachability = Reachability()!
+    
+    
+    func settingView(){
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.tag = 200
+        self.view.addSubview(blurEffectView)
+        
+        var imageView : UIImageView
+        //imaheView.contentMode =
+        imageView  = UIImageView(frame:CGRect(x:100, y:200, width:100, height:100));
+        imageView.image = UIImage(named:"nowifi")
+        imageView.contentMode = .center
+        imageView.tag = 100
+        self.view.addSubview(imageView)
+        self.flag = true
+        items.removeAll()
+        allItems.removeAll()
+    }
+    
     typealias JSONStandard = [String: AnyObject]
 
     func reload(){
@@ -44,17 +54,17 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func sortingByTitle(_ sender: UIButton) {
-        items.sort { $0.place < $1.place }
+        items = allItems.sorted { $0.place < $1.place }
         reload()
     }
     
     @IBAction func sotringPositionsUp(_ sender: UIButton) {
-        items.sort { $0.stationsCount.compare($1.stationsCount, options: .numeric) == .orderedAscending }
+        items = allItems.sorted { $0.stationsCount.compare($1.stationsCount, options: .numeric) == .orderedAscending }
         reload()
     }
     
     @IBAction func sortingPositionsDown(_ sender: UIButton) {
-        
+        items = allItems.filter { $0.stationsCount != "brak danych"}
         items.sort { $0.stationsCount.compare($1.stationsCount, options: .numeric) == .orderedDescending }
         reload()
     }
@@ -63,13 +73,74 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet var tableView: UITableView!
     var items = [Station]()
+    var allItems = [Station]()
+    
     var urlAPI: String = "https://zikit.carto.com/api/v2/sql?q=select%20*%20from%20public.propozycje_stacji"
     
     let picDictionary = ["1" : "doMontazu", "2" :  "doWyjasnienia", "4" : "przyszlosc", "3" : "istniejaceStacje"]
+    var flag = Bool()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        callAlamo(url: urlAPI)
+        reachability.whenReachable = { _ in
+            DispatchQueue.main.async{
+                if (self.flag == true){
+                    if let viewWithTag = self.view.viewWithTag(100) {
+                        viewWithTag.removeFromSuperview()
+                    }
+                    if let viewWithTag = self.view.viewWithTag(200) {
+                        viewWithTag.removeFromSuperview()
+                    }
+
+                }
+                 //self.callAlamo(url: self.urlAPI)
+            }
+            
+        }
+        reachability.whenUnreachable = { _ in
+            DispatchQueue.main.async{
+                    self.settingView()
+//                    self.flag = true
+            }
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(internetChanged), name: ReachabilityChangedNotification, object: reachability)
+        do{
+            try reachability.startNotifier()
+        }catch{
+            print("error")
+        }
+    }
+    
+    
+    func internetChanged(note: Notification){
+        let reachability = note.object as! Reachability
+        if reachability.isReachable{
+            if flag == true{
+                
+                    if let viewWithTag = self.view.viewWithTag(100) {
+                        viewWithTag.removeFromSuperview()
+                    }
+                    if let viewWithTag = self.view.viewWithTag(200) {
+                        viewWithTag.removeFromSuperview()
+                    }
+                    
+                
+                    //self.tableView.reloadData()
+            }
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+                //self.callAlamo(url: self.urlAPI)
+            }
+            self.callAlamo(url: self.urlAPI)
+        }else{
+            DispatchQueue.main.async{
+                
+                    self.settingView()
+                    self.flag = true
+
+            }
+        }
     }
     
     
@@ -83,47 +154,29 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func parseData(JSONData: Data){
         do{
             var readableJSON = try JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as! JSONStandard
-           // print(readableJSON)
+            
             if let rows = readableJSON["rows"] as? [JSONStandard]{
-                print(rows)
-               // print(readableJSON)
-                
-                for i in 0..<rows.count{
-                let row = rows[i]
-                if let name = row["name"] as? String{
-                    if name.isEmpty == false{
-                    if let status = row["status"] as? String{
-                        if let liczbaStanowisk = row["liczba_stanowisk"] as? String{
-                            print("status: \(status)")
-                            print(name, status, liczbaStanowisk)
-                            items.append(Station.init(place: name, stationsCount: liczbaStanowisk, status: status))
-                           // print(readableJSON)
-                            DispatchQueue.main.async {
-                                self.tableView.reloadData()
-                            }
-
-                        }else{
-                            //print(name, status, liczbaStanowisk)
-                            print("status: brak danych")
-                            let liczbaStanowisk = "brak danych"
-                            items.append(Station.init(place: name, stationsCount: liczbaStanowisk, status: status))
-                            // print(readableJSON)
-                            DispatchQueue.main.async {
-                                self.tableView.reloadData()
-                            }
-
-                        }
-                    }
+                for row in rows{
+                    if let name = row["name"] as? String,
+                        let status = row["status"] as? String,
+                        !name.isEmpty{
                     
+                                if let liczbaStanowisk = row["liczba_stanowisk"] as? String{
+                                    items.append(Station.init(place: name, stationsCount: liczbaStanowisk, status: status))
+                                }else{
+                                    let liczbaStanowisk = "brak danych"
+                                    items.append(Station.init(place: name, stationsCount: liczbaStanowisk, status: status))
+                                }
+                         }
                     }
+                    self.allItems = items
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
-                    
-            }
             }
         }catch{
             print(error)
         }
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -144,13 +197,10 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.stationsCount.text = items[indexPath.row].stationsCount
         let num = items[indexPath.row].status
         let value = picDictionary[num!]
-        print(num!, value!)
         cell.statusSign.image = UIImage(named: value!)
         
         return cell
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

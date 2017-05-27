@@ -18,6 +18,7 @@
 		A90CEF9A1ED38A84003B4116 /* WaveloStationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF991ED38A84003B4116 /* WaveloStationsUITests.swift */; };
 		A9224DF11ED712D500E4100C /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9224DF01ED712D500E4100C /* ListController.swift */; };
 		A9224DF31ED73B2700E4100C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9224DF21ED73B2700E4100C /* Cell.swift */; };
+		A9677CAD1ED9F4C500CC5414 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9677CAC1ED9F4C500CC5414 /* Reachability.swift */; };
 		BF7B044917B2C561E1FEB7B3 /* Pods_WaveloStationsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5494190E8870E18FC111A5 /* Pods_WaveloStationsUITests.framework */; };
 		C991E8C68F4E773DBBA1FB5C /* Pods_WaveloStationsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42840752BDCAFDD8E58BD401 /* Pods_WaveloStationsTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		A90CEF9B1ED38A84003B4116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9224DF01ED712D500E4100C /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		A9224DF21ED73B2700E4100C /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		A9677CAC1ED9F4C500CC5414 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		BB06EA3305102D9AE528F2BD /* Pods-WaveloStationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaveloStationsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaveloStationsTests/Pods-WaveloStationsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				A90CEF761ED38A84003B4116 /* AppDelegate.swift */,
 				A90CEF781ED38A84003B4116 /* ViewController.swift */,
 				A9224DF01ED712D500E4100C /* ListController.swift */,
+				A9677CAC1ED9F4C500CC5414 /* Reachability.swift */,
 				A9224DF21ED73B2700E4100C /* Cell.swift */,
 				A90CEF7A1ED38A84003B4116 /* Main.storyboard */,
 				A90CEF801ED38A84003B4116 /* Assets.xcassets */,
@@ -460,6 +463,7 @@
 			files = (
 				A90CEF791ED38A84003B4116 /* ViewController.swift in Sources */,
 				A90CEF7F1ED38A84003B4116 /* WaveloStations.xcdatamodeld in Sources */,
+				A9677CAD1ED9F4C500CC5414 /* Reachability.swift in Sources */,
 				A9224DF31ED73B2700E4100C /* Cell.swift in Sources */,
 				A90CEF771ED38A84003B4116 /* AppDelegate.swift in Sources */,
 				A9224DF11ED712D500E4100C /* ListController.swift in Sources */,
