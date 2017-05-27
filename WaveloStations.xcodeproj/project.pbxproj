@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0366AEF6B6C83D8E17AD55E0 /* Pods_WaveloStations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6F8FE11DC63B6F223B2CBF /* Pods_WaveloStations.framework */; };
 		A90CEF771ED38A84003B4116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF761ED38A84003B4116 /* AppDelegate.swift */; };
-		A90CEF791ED38A84003B4116 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF781ED38A84003B4116 /* ViewController.swift */; };
 		A90CEF7C1ED38A84003B4116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90CEF7A1ED38A84003B4116 /* Main.storyboard */; };
 		A90CEF7F1ED38A84003B4116 /* WaveloStations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A90CEF7D1ED38A84003B4116 /* WaveloStations.xcdatamodeld */; };
 		A90CEF811ED38A84003B4116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A90CEF801ED38A84003B4116 /* Assets.xcassets */; };
@@ -51,7 +50,6 @@
 		8C6F8FE11DC63B6F223B2CBF /* Pods_WaveloStations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaveloStations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90CEF731ED38A84003B4116 /* WaveloStations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveloStations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90CEF761ED38A84003B4116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A90CEF781ED38A84003B4116 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A90CEF7B1ED38A84003B4116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A90CEF7E1ED38A84003B4116 /* WaveloStations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WaveloStations.xcdatamodel; sourceTree = "<group>"; };
 		A90CEF801ED38A84003B4116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				A90CEF761ED38A84003B4116 /* AppDelegate.swift */,
-				A90CEF781ED38A84003B4116 /* ViewController.swift */,
 				A9224DF01ED712D500E4100C /* ListController.swift */,
 				A9677CAC1ED9F4C500CC5414 /* Reachability.swift */,
 				A9224DF21ED73B2700E4100C /* Cell.swift */,
@@ -461,7 +458,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A90CEF791ED38A84003B4116 /* ViewController.swift in Sources */,
 				A90CEF7F1ED38A84003B4116 /* WaveloStations.xcdatamodeld in Sources */,
 				A9677CAD1ED9F4C500CC5414 /* Reachability.swift in Sources */,
 				A9224DF31ED73B2700E4100C /* Cell.swift in Sources */,
