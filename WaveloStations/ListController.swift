@@ -41,15 +41,9 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let picDictionary = ["1" : "doMontazu", "2" :  "doWyjasnienia", "4" : "przyszlosc", "3" : "istniejaceStacje"]
     
-   
-//    func parse(data: String?) -> Bool?{
-//        guard let data
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         callAlamo(url: urlAPI)
-        // Do any additional setup after loading the view.
     }
     
     
@@ -71,6 +65,7 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 for i in 0..<rows.count{
                 let row = rows[i]
                 if let name = row["name"] as? String{
+                    if name.isEmpty == false{
                     if let status = row["status"] as? String{
                         if let liczbaStanowisk = row["liczba_stanowisk"] as? String{
                             print("status: \(status)")
@@ -94,7 +89,9 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         }
                     }
                     
+                    }
                 }
+                    
             }
             }
         }catch{
@@ -102,10 +99,6 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
     }
-    
-    
-    
-
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
