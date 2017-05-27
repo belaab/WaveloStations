@@ -35,6 +35,32 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     typealias JSONStandard = [String: AnyObject]
 
+    func reload(){
+        DispatchQueue.main.async(execute: {
+            self.tableView.reloadData()
+            self.tableView.contentOffset = .zero
+            
+        })
+    }
+    
+    @IBAction func sortingByTitle(_ sender: UIButton) {
+        items.sort { $0.place < $1.place }
+        reload()
+    }
+    
+    @IBAction func sotringPositionsUp(_ sender: UIButton) {
+        items.sort { $0.stationsCount.compare($1.stationsCount, options: .numeric) == .orderedAscending }
+        reload()
+    }
+    
+    @IBAction func sortingPositionsDown(_ sender: UIButton) {
+        
+        items.sort { $0.stationsCount.compare($1.stationsCount, options: .numeric) == .orderedDescending }
+        reload()
+    }
+    
+    
+    
     @IBOutlet var tableView: UITableView!
     var items = [Station]()
     var urlAPI: String = "https://zikit.carto.com/api/v2/sql?q=select%20*%20from%20public.propozycje_stacji"

@@ -31,7 +31,7 @@
                                         <rect key="frame" x="0.0" y="28" width="406" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fe4-bT-V5O" id="hLT-zJ-xAX">
-                                            <rect key="frame" x="0.0" y="0.0" width="406" height="67"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="406" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="liczba stanowisk:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cF2-xw-jJU">
@@ -120,6 +120,9 @@
                                         <integer key="value" value="35"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sotringPositionsUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2g-Ui-LXJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WGq-Kr-MaA">
                                 <rect key="frame" x="294" y="50" width="70" height="70"/>
@@ -135,6 +138,9 @@
                                         <integer key="value" value="35"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sortingPositionsDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vu6-ua-S0H"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vJV-lY-GK6">
                                 <rect key="frame" x="51" y="50" width="70" height="70"/>
@@ -149,6 +155,9 @@
                                         <integer key="value" value="35"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sortingByTitle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M5u-tT-Glt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
