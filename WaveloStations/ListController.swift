@@ -7,7 +7,6 @@
 //
 
 
-
 struct Station {
     var place: String!
     var stationsCount: String!
@@ -22,25 +21,10 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let reachability = Reachability()!
     
-    
     func settingView(){
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = self.view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.tag = 200
-        self.view.addSubview(blurEffectView)
-        
-        var imageView : UIImageView
-        //imaheView.contentMode =
-        imageView  = UIImageView(frame:CGRect(x:100, y:200, width:100, height:100));
-        imageView.image = UIImage(named:"nowifi")
-        imageView.contentMode = .center
-        imageView.tag = 100
-        self.view.addSubview(imageView)
+        let alert = UIAlertView(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", delegate: nil, cancelButtonTitle: "OK")
+        alert.show()
         self.flag = true
-        items.removeAll()
-        allItems.removeAll()
     }
     
     typealias JSONStandard = [String: AnyObject]
@@ -69,9 +53,14 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
         reload()
     }
     
+    @IBOutlet var firstBtn: UIButton!
     
+    @IBOutlet var secondBtn: UIButton!
+    
+    @IBOutlet var thirdBtn: UIButton!
     
     @IBOutlet var tableView: UITableView!
+    
     var items = [Station]()
     var allItems = [Station]()
     
@@ -83,27 +72,7 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        reachability.whenReachable = { _ in
-            DispatchQueue.main.async{
-                if (self.flag == true){
-                    if let viewWithTag = self.view.viewWithTag(100) {
-                        viewWithTag.removeFromSuperview()
-                    }
-                    if let viewWithTag = self.view.viewWithTag(200) {
-                        viewWithTag.removeFromSuperview()
-                    }
 
-                }
-                 //self.callAlamo(url: self.urlAPI)
-            }
-            
-        }
-        reachability.whenUnreachable = { _ in
-            DispatchQueue.main.async{
-                    self.settingView()
-//                    self.flag = true
-            }
-        }
         NotificationCenter.default.addObserver(self, selector: #selector(internetChanged), name: ReachabilityChangedNotification, object: reachability)
         do{
             try reachability.startNotifier()
@@ -116,28 +85,28 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func internetChanged(note: Notification){
         let reachability = note.object as! Reachability
         if reachability.isReachable{
-            if flag == true{
-                
-                    if let viewWithTag = self.view.viewWithTag(100) {
-                        viewWithTag.removeFromSuperview()
-                    }
-                    if let viewWithTag = self.view.viewWithTag(200) {
-                        viewWithTag.removeFromSuperview()
-                    }
-                    
-                
-                    //self.tableView.reloadData()
-            }
             DispatchQueue.main.async{
+                if self.flag == true{
+                    self.firstBtn.backgroundColor = UIColor(red: 82/255, green: 127/255, blue: 232/255, alpha: 1.0)
+                    self.secondBtn.backgroundColor = UIColor(red: 129/255, green: 190/255, blue: 57/255, alpha: 1.0)
+                    self.thirdBtn.backgroundColor = UIColor(red: 102/255, green: 204/255, blue: 255/255, alpha: 1.0)
+                    self.items.removeAll()
+                    self.allItems.removeAll()
+                    
+                }
+
                 self.tableView.reloadData()
-                //self.callAlamo(url: self.urlAPI)
+                self.callAlamo(url: self.urlAPI)
             }
-            self.callAlamo(url: self.urlAPI)
+           // self.tableView.backgroundColor = UIColor.white
+           // self.callAlamo(url: self.urlAPI)
         }else{
             DispatchQueue.main.async{
-                
-                    self.settingView()
-                    self.flag = true
+                self.firstBtn.backgroundColor = UIColor(red: 82/255, green: 127/255, blue: 232/255, alpha: 0.5)
+                self.secondBtn.backgroundColor = UIColor(red: 129/255, green: 190/255, blue: 57/255, alpha: 0.5)
+                self.thirdBtn.backgroundColor = UIColor(red: 102/255, green: 204/255, blue: 255/255, alpha: 0.5)
+                self.settingView()
+                self.flag = true
 
             }
         }

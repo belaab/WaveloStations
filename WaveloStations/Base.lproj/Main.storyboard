@@ -144,7 +144,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vJV-lY-GK6">
                                 <rect key="frame" x="51" y="50" width="70" height="70"/>
-                                <color key="backgroundColor" red="0.27354535689176129" green="0.61471744271116557" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.32276880741119385" green="0.49818152189254761" blue="0.91055667400360107" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="ZcS-D6-7xH"/>
                                 </constraints>
@@ -176,7 +176,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstBtn" destination="vJV-lY-GK6" id="Ii6-oU-ccv"/>
+                        <outlet property="secondBtn" destination="Pjh-pZ-XSX" id="Vhd-dO-bIh"/>
                         <outlet property="tableView" destination="Mfd-vU-XfX" id="wfp-bs-ZuK"/>
+                        <outlet property="thirdBtn" destination="WGq-Kr-MaA" id="Tgf-Co-6Y2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
