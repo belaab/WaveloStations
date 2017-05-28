@@ -13,29 +13,56 @@ struct Station {
     var status: String!
 }
 
-
 import UIKit
 import Alamofire
 
 class ListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let reachability = Reachability()!
+    var items = [Station]()
+    var allItems = [Station]()
+    var refresher = UIRefreshControl()
+
     
-    func settingView(){
-        let alert = UIAlertView(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", delegate: nil, cancelButtonTitle: "OK")
-        alert.show()
-        self.flag = true
-    }
+    @IBOutlet var firstBtn: UIButton!
+    @IBOutlet var secondBtn: UIButton!
+    @IBOutlet var thirdBtn: UIButton!
+    
+    @IBOutlet var tableView: UITableView!
     
     typealias JSONStandard = [String: AnyObject]
+    
+    var urlAPI: String = "https://zikit.carto.com/api/v2/sql?q=select%20*%20from%20public.propozycje_stacji"
+    
+    let picDictionary = ["1" : "doMontazu", "2" :  "doWyjasnienia", "4" : "przyszlosc", "3" : "istniejaceStacje"]
+    var flag = Bool()
 
-    func reload(){
-        DispatchQueue.main.async(execute: {
-            self.tableView.reloadData()
-            self.tableView.contentOffset = .zero
-            
-        })
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refresher)
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(internetChanged), name: ReachabilityChangedNotification, object: reachability)
+        do{
+            try reachability.startNotifier()
+        }catch{
+            print("error")
+        }
     }
+    
+    func refresh(){
+        items.removeAll()
+        allItems.removeAll()
+        callAlamo(url: urlAPI)
+        tableView.reloadData()
+        refresher.endRefreshing()
+    }
+
     
     @IBAction func sortingByTitle(_ sender: UIButton) {
         items = allItems.sorted { $0.place < $1.place }
@@ -53,32 +80,19 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
         reload()
     }
     
-    @IBOutlet var firstBtn: UIButton!
     
-    @IBOutlet var secondBtn: UIButton!
+    func settingView(){
+        let alert = UIAlertView(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", delegate: nil, cancelButtonTitle: "OK")
+        alert.show()
+        self.flag = true
+    }
     
-    @IBOutlet var thirdBtn: UIButton!
-    
-    @IBOutlet var tableView: UITableView!
-    
-    var items = [Station]()
-    var allItems = [Station]()
-    
-    var urlAPI: String = "https://zikit.carto.com/api/v2/sql?q=select%20*%20from%20public.propozycje_stacji"
-    
-    let picDictionary = ["1" : "doMontazu", "2" :  "doWyjasnienia", "4" : "przyszlosc", "3" : "istniejaceStacje"]
-    var flag = Bool()
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        NotificationCenter.default.addObserver(self, selector: #selector(internetChanged), name: ReachabilityChangedNotification, object: reachability)
-        do{
-            try reachability.startNotifier()
-        }catch{
-            print("error")
-        }
+    func reload(){
+        DispatchQueue.main.async(execute: {
+            self.tableView.reloadData()
+            self.tableView.contentOffset = .zero
+            
+        })
     }
     
     
@@ -98,16 +112,13 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.tableView.reloadData()
                 self.callAlamo(url: self.urlAPI)
             }
-           // self.tableView.backgroundColor = UIColor.white
-           // self.callAlamo(url: self.urlAPI)
         }else{
             DispatchQueue.main.async{
-                self.firstBtn.backgroundColor = UIColor(red: 82/255, green: 127/255, blue: 232/255, alpha: 0.5)
-                self.secondBtn.backgroundColor = UIColor(red: 129/255, green: 190/255, blue: 57/255, alpha: 0.5)
-                self.thirdBtn.backgroundColor = UIColor(red: 102/255, green: 204/255, blue: 255/255, alpha: 0.5)
+                self.firstBtn.backgroundColor = UIColor(red: 82/255, green: 127/255, blue: 232/255, alpha: 0.4)
+                self.secondBtn.backgroundColor = UIColor(red: 129/255, green: 190/255, blue: 57/255, alpha: 0.4)
+                self.thirdBtn.backgroundColor = UIColor(red: 102/255, green: 204/255, blue: 255/255, alpha: 0.4)
                 self.settingView()
                 self.flag = true
-
             }
         }
     }
@@ -146,8 +157,10 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }catch{
             print(error)
         }
+
     }
     
+   
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
