@@ -23,7 +23,6 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var allItems = [Station]()
     var refresher = UIRefreshControl()
 
-    
     @IBOutlet var firstBtn: UIButton!
     @IBOutlet var secondBtn: UIButton!
     @IBOutlet var thirdBtn: UIButton!
@@ -36,33 +35,7 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let picDictionary = ["1" : "doMontazu", "2" :  "doWyjasnienia", "4" : "przyszlosc", "3" : "istniejaceStacje"]
     var flag = Bool()
-
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refresher.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
-        tableView.addSubview(refresher)
-        
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(internetChanged), name: ReachabilityChangedNotification, object: reachability)
-        do{
-            try reachability.startNotifier()
-        }catch{
-            print("error")
-        }
-    }
-    
-    func refresh(){
-        items.removeAll()
-        allItems.removeAll()
-        callAlamo(url: urlAPI)
-        tableView.reloadData()
-        refresher.endRefreshing()
-    }
-
     
     @IBAction func sortingByTitle(_ sender: UIButton) {
         items = allItems.sorted { $0.place < $1.place }
@@ -91,10 +64,16 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
         DispatchQueue.main.async(execute: {
             self.tableView.reloadData()
             self.tableView.contentOffset = .zero
-            
         })
     }
     
+    func refresh(){
+        items.removeAll()
+        allItems.removeAll()
+        callAlamo(url: urlAPI)
+        tableView.reloadData()
+        refresher.endRefreshing()
+    }
     
     func internetChanged(note: Notification){
         let reachability = note.object as! Reachability
@@ -108,7 +87,6 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.allItems.removeAll()
                     
                 }
-
                 self.tableView.reloadData()
                 self.callAlamo(url: self.urlAPI)
             }
@@ -158,6 +136,22 @@ class ListController: UIViewController, UITableViewDelegate, UITableViewDataSour
             print(error)
         }
 
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refresher)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(internetChanged), name: ReachabilityChangedNotification, object: reachability)
+        do{
+            try reachability.startNotifier()
+        }catch{
+            print("error")
+        }
     }
     
    
